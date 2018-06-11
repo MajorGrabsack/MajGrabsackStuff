@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<title> Are you Bored?  </title>
+		<style>
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			
+			html{
+				font-size: 62.5%;  /* para q 1 px seja equivalente a 1px */
+			}
+			
+			body {
+				background-color: #EEE;
+				font-family: Verdana, sans-serif;
+				
+				
+			}
+			
+			#wrapper {
+				background-color: #FFF;
+				
+				
+				
+				
+			}
+			
+			header {
+				background-color: #1f1f1f;
+				width: 100%;
+			}
+						
+			header .banner a img{
+				width:40px; 
+				height: auto;
+				display: inline-block;	
+				padding: 10px 0 0 10px;
+			}
+			
+			header .banner input {
+				width: 140px;
+				margin-left: 15px;
+				display: inline-block;
+				
+			}
+			
+			header .logo a img{
+				width:200px; 
+				height: auto;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 25px 0 25px 0;
+			}
+			
+			header .banner .login {
+				display: inline-block;
+				font-size: 1.8rem;
+				padding-left: 1750px;
+				font-family: Verdana;
+				color: #FFF;
+				text-decoration: none;
+				
+				
+				
+				
+			}
+			
+			header .banner .login a{
+				
+				font-size: 1.8rem;
+				font-family: Verdana;
+				color: #FFF;
+				text-decoration: none;
+				border-radius: 3px  3px 3px 3px;
+				
+				
+			}
+			
+			header .banner .login a:hover {
+				background-color: #dff0fe;
+				font-weight: bold;
+				color: #1f1f1f;
+			}
+			
+			
+			header nav ul {
+				padding-left: 31px;
+				
+			}
+			
+			header nav ul li {
+				display: inline-block;
+				background-color: #1f1f1f;
+				padding: 0 5px;
+				height: 27px;
+				line-height: 27px;
+				border-radius: 3px  3px 3px 3px;
+				margin-right: 1px;
+				
+				
+			}
+			
+			header nav ul li a {
+				color: #FFF;
+				text-decoration: none;
+				font-size: 1.9rem;
+				
+				
+				
+			}
+			
+			header nav ul li:hover {
+				background-color: #dff0fe;
+				font-weight: bold;
+				color: #1f1f1f;
+			}
+			
+			header nav ul li a:hover {
+				background-color: #dff0fe;
+				font-weight: bold;
+				color: #1f1f1f;
+			}
+			
+			.dropdown {
+			  float: left;
+			  overflow: hidden;
+			  padding-top: 3px;
+			}
+
+			
+			.dropdown .dropbtn {
+			  font-size: 1.9rem; 
+			  border: none;
+			  outline: none;
+			  color: white;
+			  padding: 3p x 15px;
+			  background-color: inherit;
+			  font-family: Verdana;
+			  margin: 0; 
+			  border-top: 30px;
+			 
+			}
+
+			
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			  background-color: #dff0fe;
+			}
+
+			
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  background-color: #424242;
+			  min-width: 228px;
+			  box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+			  border-radius: 4px  4px 4px 4px;
+			  
+			}
+
+			
+			.dropdown-content a {
+			  float: none;
+			  color: #dff0fe;
+			  padding: 11px 10px;
+			  text-decoration: none;
+			  display: block;
+			  text-align: left;
+			  font-size: 1.9rem;
+			}
+
+			
+			.dropdown-content a:hover {
+			  background-color: #ddd;
+			}
+
+			
+			.dropdown:hover .dropdown-content {
+			  display: block;
+			}
+			
+			
+			.dropbtn img {
+				width: 27px;
+			
+			}
+			
+			main {
+				width: 75%;
+				
+				float: left;
+				padding-top: 14px;
+			}
+			#middle .sidebar {
+				width: 25%;
+				outline: 1px solid yellow;
+				
+				float: left;
+				font-size: 3rem;
+				text-align: center;
+				padding: 15px 0 15px 0;
+				color: #1f1f1f;
+				
+				
+				
+			}
+			#middle .sidebar ul {
+				border-bottom: 3px solid #ddd;
+				padding-top: 2px;
+			}
+			
+			#middle .sidebar ul li {
+				display: inline-block;
+				padding: 0 5px;
+				height: 27px;
+				line-height: 27px;
+				
+				margin-right: 1px;
+				margin-top: 10px;
+				
+				
+			}
+			#middle .sidebar ul li:hover {
+				border-bottom: 3px solid #1f1f1f;
+				
+			}
+			
+			#middle .sidebar ul li a {
+				color: #1f1f1f;
+				text-decoration: none;
+				font-size: 1.9rem;
+			
+			}
+			
+			#middle main article {
+				padding-left: 50px;
+				padding-top: 25px;
+				margin: auto;
+				
+			}
+						
+			#middle main article .artigo a{
+				font-size: 2.6rem;
+				color: #1f1f1f;
+				text-decoration: none;
+				margin-top: 100px;
+			
+				
+				
+				
+				
+			}
+			
+			#middle main article .artigo a:hover{
+				font-size: 2.7rem;
+				text-decoration: bold;
+				
+			}
+			
+			
+			#middle main article p{	
+				font-size: 1.6rem;
+				margin-top: 10px;
+				
+				
+			
+			}
+			
+			#middle main article .comments{	
+				font-size: 1.4rem;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				
+			
+			}
+			
+			#middle main article .comments a{
+				color: #1f1f1f;
+				text-decoration: none;
+				
+			} 	
+		</style>	
+		
+		<script>
+			
+			
+		
+		</script>
+	</head>
+	<body>
+		
+		<div id="wrapper">
+			<header>
+				
+				<div class="banner">
+					  <a href=""><img src="media/Face.png" /></a>
+					  <a href=""><img src="media/Insta.png" /></a>
+					  <a href=""><img src="media/Twitter.png" /></a>
+					  <input type="text" placeholder="Search..">
+					  <div class="login">
+					<a href="">Login</a>
+					<a href="">Register</a>
+				</div>
+				</div>
+				
+				
+				<div class="logo">
+					<a href="">
+						<img src="media/RUBlogo.jpg" alt="">
+					</a>
+				</div>
+				
+				<nav>
+					<ul>
+						<li class="selected"><a href="">Latest</a></li>
+						<li><a href="">Trending</a></li>
+						<li><a href="">LeaderBoard</a></li>
+						<li>
+							<div class="dropdown">
+								<button class="dropbtn"><img src="media/menu3.png" /></button>
+								<div class="dropdown-content">
+								  <a href="">Entertainment</a>
+								  <a href="">Funny</a>
+								  <a href="">News & Politics</a>
+								  <a href="">Science</a>
+								  <a href="">Quizzes</a>
+								  <a href="">Sports</a>
+								  <a href="">Weird</a>
+								  <a href="">Tech</a>
+								</div>
+							</div>
+						</li>
+						
+						
+					</ul>
+				</nav>
+				
+			</header>
+			<div id="middle">
+				<main>
+					<article>
+						<div class="artigo">
+							<a href="">
+								<figure>
+								<img src="https://www.i-am-bored.com/images/articles/featured/2018/6/7/300_160_5647da4c1727ac21aa3d9f70e55ba356.jpeg" alt="">
+								
+							</figure>
+							Behold! One Of Ohio's Best Drivers <br></a><p>Side Question: What compels someone to do this?</p>
+						</div>	
+						
+						<div class="comments"><a href="">Comments</a></div>
+					</article>
+					<article>
+						<div class="artigo">
+							<a href="">
+							<figure>
+							<img src="https://www.i-am-bored.com/images/articles/featured/2018/6/6/300_160_31991d48833b164f97317924d16bbb56.jpeg" alt="">
+							</figure>
+							Chinese Man Attempts To Cure Constipation By Shoving Eggplant Up His Anus, But It Gets Stuck.. </a><br><p>Constipation eh? I what else they found floating around up there.</p>
+						</div>
+						<div class="comments"><a href="">Comments</a></div>
+					</article>
+					<article>
+						<div class="artigo">	
+							<a href="">
+							<figure>
+							<img src="https://www.i-am-bored.com/images/articles/featured/2018/6/4/300_160_1915ff08ed8776018d4da471611abbe6.jpeg" alt="">
+							</figure>
+							The TRUTH Why Modern Music Is Awful </a><br><p>Video didn't kill the radio star... We did.</p>
+						</div>
+						<div class="comments"><a href="">Comments</a></div>
+					</article>
+									
+				</main>
+				<div class="sidebar">TOP 10
+					<ul>
+						<li><a href="">Week</a></li>
+						<li><a href="">Month</a></li>
+						<li><a href="">Year</a></li>
+					</ul>
+				</div>
+			</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>
